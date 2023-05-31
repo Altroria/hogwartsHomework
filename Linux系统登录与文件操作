@@ -1,0 +1,15 @@
+登录 Linux 系统：
+ssh ck271905@shell.ceshiren.com
+创建新目录。
+mkdir testdir
+切换到新目录下。
+cd testdir
+创建新文件，在新文件中添加内容。
+vim test.txt
+添加内容后，按esc，：wq
+查看新文件中的内容。
+cat test.txt
+修改新文件权限为可读、可写、可执行。
+chmod +777 test.txt
+查看当前目录。
+pwd
