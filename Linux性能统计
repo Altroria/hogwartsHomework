@@ -1,0 +1,10 @@
+查询 Linux 系统负载与进程。
+top
+查询 Linux 系统内存使用数据并保存到文件中。
+free -h > test.txt
+统计内存数据文件的字节数。
+wc -c test.txt
+对内存数据文件的每一行按 ASCII 码值降序排列并去重。
+sort -r test.txt | uniq
+查询 Linux 系统进程列表快照。
+ps aux
