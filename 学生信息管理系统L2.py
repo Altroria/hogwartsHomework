@@ -20,6 +20,17 @@ class Student:
     name: str
     gender: str
 
+    # 私有属性
+    __achievement: int
+    
+    @property
+    def achievement(self):
+        return self.__achievement
+
+    @achievement.setter
+    def achievement(self, value):
+        self.__achievement = value
+
 
 class StudentList:
     def __init__(self, student_list: List[Student]):
@@ -43,7 +54,6 @@ class StudentList:
                 self.s_list.remove(student)
         # print(self.s_list)
 
-
     def update(self, student: Student):
         """
         更新指定学生的信息
@@ -64,15 +74,13 @@ class StudentList:
                 break
 
 
-
-
 if __name__ == '__main__':
     # 入参自己定义
-    s1 = Student(1,"张三","男")
-    s2 = Student(2,"李四","女")
-    s3 = Student(3,"王五","男")
-    s4 = Student(3,"赵四","男")
-    s5 = Student(4,"七七","女")
+    s1 = Student(1, "张三", "男")
+    s2 = Student(2, "李四", "女")
+    s3 = Student(3, "王五", "男")
+    s4 = Student(3, "赵四", "男")
+    s5 = Student(4, "七七", "女")
 
     # print(s1)
     # 初始化一个成员名单
@@ -88,4 +96,3 @@ if __name__ == '__main__':
     # 打印操作后的学生列表
     for student in s_list.s_list:
         print(f"学号：{student.student_id}，姓名：{student.name}，性别：{student.gender}")
-
